@@ -1,0 +1,111 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
+    background-color: #1a1a2e; /* Warna latar belakang yang lebih gelap */
+    color: #e0e0e0; /* Warna teks lebih terang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: #16213e; /* Warna kontainer lebih gelap */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Bayangan lebih dalam */
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #0f3460; /* Border halus */
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive; /* Font untuk judul */
+    color: #e94560; /* Warna judul yang mencolok */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 3px 3px #0f3460; /* Efek bayangan pada judul */
+}
+
+#story-text {
+    background-color: #0f3460; /* Warna latar belakang teks cerita */
+    border: 1px solid #533483; /* Border yang lebih menonjol */
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 40px;
+    text-align: left;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#choices {
+    display: grid; /* Menggunakan grid untuk tata letak yang lebih baik */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Kolom responsif */
+    gap: 15px;
+}
+
+.choice-button {
+    background-color: #533483; /* Warna tombol yang serasi */
+    color: #e0e0e0; /* Warna teks tombol */
+    border: none;
+    padding: 18px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transisi lebih banyak */
+    text-align: center; /* Teks tombol di tengah */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice-button:hover {
+    background-color: #e94560; /* Warna hover yang mencolok */
+    transform: translateY(-3px); /* Efek angkat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.choice-button:active {
+    background-color: #b82f4a; /* Warna aktif */
+    transform: translateY(0); /* Kembali ke posisi semula */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #story-text {
+        font-size: 1em;
+    }
+
+    .choice-button {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #choices {
+        grid-template-columns: 1fr; /* Satu kolom di layar sangat kecil */
+    }
+}
